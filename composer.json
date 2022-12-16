@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Qnibus\\LaravelJasyptHash\\HashingServiceProvider"
+                "Qnibus\\LaravelJasyptHash\\Providers\\HashingServiceProvider"
             ]
         }
     }
