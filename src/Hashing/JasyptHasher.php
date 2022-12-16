@@ -28,39 +28,33 @@ class JasyptHasher extends AbstractHasher implements HasherContract
      */
     protected $iteration = 1000;
 
-    /**
-     * @var string|null salt
-     */
-    protected $salt = null;
-
     public function __construct(array $options = [])
     {
         $this->algoName = $options['algoName'];
         $this->verifyAlgorithm = $options['verify'] ?? $this->verifyAlgorithm;
         $this->iteration = $options['iteration'] ?? $this->iteration;
-        $this->salt = $options['salt'] ?? $this->salt;
     }
 
     /**
      * @inheritDoc
      */
-    public function make($value, array $options = [])
+    public function make($value, array $salt = [])
     {
-        $this->salt = $options['salt'] ?? $this->generateSalt();
+        $salt = blank($salt) ? $this->generateSalt() : $salt;
 
         if (is_array($value)) {
-            $value = array_merge($this->salt, $value);
+            $value = array_merge($salt, $value);
             for ($i = 1; $i <= $this->iteration; $i++) {
                 $value = hash($this->algoName, $this->getString($value), true);
                 $value = $this->getBytes($value);
             }
-            $value = array_merge($this->salt, $value);
+            $value = array_merge($salt, $value);
 
             return base64_encode($this->getString($value));
         } else if (is_string($value)) {
             $bytes = $this->getBytes(normalizer_normalize(utf8_encode($value)));
 
-            return $this->make($bytes, $this->salt);
+            return $this->make($bytes, $salt);
         }
     }
 
