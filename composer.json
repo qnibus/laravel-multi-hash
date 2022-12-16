@@ -3,7 +3,7 @@
     "description": "Jasypt integration for Laravel 9.x",
     "type": "library",
     "license": "MIT",
-    "version": "0.5",
+    "version": "0.9",
     "authors": [
         {
             "name": "damha-ahn",
