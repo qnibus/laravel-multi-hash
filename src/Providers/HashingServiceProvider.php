@@ -16,7 +16,7 @@ class HashingServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/jasypt.php', 'hashing'
+            __DIR__.'/../../config/jasypt.php', 'hashing'
         );
     }
 
