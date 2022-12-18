@@ -23,3 +23,8 @@
     Hash::check('some string', 'NDM1M2M0ZmQ3MWYzNmJiZIXQlXLOzKcLkUKAZ6p6NPBBDA0zGwVCDkFuLmvbeozd');
     // result: true
     ```
+4. Publish package config to config directory in laravel.
+    ```bash
+    php artisan vendor:publish --tag=jasypt-config
+    ```
+5. Modify option in `/config/jasypt.php`
