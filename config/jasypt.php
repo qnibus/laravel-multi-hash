@@ -13,4 +13,12 @@ return [
         'iteration' => 1000,
     ],
 
+    'sha256' => [
+        'algoName' => 'sha256',
+    ],
+
+    'sha512' => [
+        'algoName' => 'sha512',
+    ],
+
 ];
