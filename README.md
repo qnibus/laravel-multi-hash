@@ -11,7 +11,7 @@
      
 2. Open `/config/hashing.php` in your laravel application and modify.
     ```php
-    'driver' => 'jasypt',
+    'driver' => 'jasypt',// 'md5', 'sha256', 'sha512' or 'jasypt'
     ```
 3. Your code anywhere...
     ```php
