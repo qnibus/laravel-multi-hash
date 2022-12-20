@@ -1,6 +1,6 @@
 <?php
 
-namespace Qnibus\LaravelJasyptHash\Hashing;
+namespace Qnibus\LaravelMultiHash\Hashing;
 
 use App\Library\Hashing\RuntimeException;
 use Illuminate\Contracts\Hashing\Hasher as HasherContract;

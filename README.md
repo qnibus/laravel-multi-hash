@@ -1,4 +1,4 @@
-# LaravelJasyptHash
+# LaravelMultiHash
 ## Requirement
 - laravel 9.x or later
 - php 8.x
@@ -28,3 +28,22 @@
     php artisan vendor:publish --tag=jasypt-config
     ```
 5. Modify option in `/config/jasypt.php`
+
+## Better use
+```php
+# Usage for jasypt
+Hash::driver('jasypt')->make('some string');
+Hash::driver('jasypt')->check('some string', $hashedString);
+
+# Usage for sha256
+Hash::driver('sha256')->make('some string');
+Hash::driver('sha256')->check('some string', $hashedString);
+
+# Usage for sha512
+Hash::driver('sha512')->make('some string');
+Hash::driver('sha512')->check('some string', $hashedString);
+
+# Usage for md5
+Hash::driver('md5')->make('some string');
+Hash::driver('md5')->check('some string', $hashedString);
+```

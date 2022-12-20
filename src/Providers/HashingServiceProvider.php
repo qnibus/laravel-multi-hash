@@ -1,11 +1,11 @@
 <?php
 
-namespace Qnibus\LaravelJasyptHash\Providers;
+namespace Qnibus\LaravelMultiHash\Providers;
 
-use Qnibus\LaravelJasyptHash\Hashing\JasyptHasher;
-use Qnibus\LaravelJasyptHash\Hashing\Md5Hasher;
-use Qnibus\LaravelJasyptHash\Hashing\Sha256Hasher;
-use Qnibus\LaravelJasyptHash\Hashing\Sha512Hasher;
+use Qnibus\LaravelMultiHash\Hashing\JasyptHasher;
+use Qnibus\LaravelMultiHash\Hashing\Md5Hasher;
+use Qnibus\LaravelMultiHash\Hashing\Sha256Hasher;
+use Qnibus\LaravelMultiHash\Hashing\Sha512Hasher;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
