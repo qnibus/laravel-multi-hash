@@ -6,7 +6,7 @@
 ## Usage
 1. Input your command line in below command.
     ```bash
-    composer require qnibus/laravel-jasypt-hash
+    composer require qnibus/laravel-multi-hash
     ```
      
 2. Open `/config/hashing.php` in your laravel application and modify.
