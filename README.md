@@ -25,9 +25,9 @@
     ```
 4. Publish package config to config directory in laravel.
     ```bash
-    php artisan vendor:publish --tag=jasypt-config
+    php artisan vendor:publish --tag=multi-hashing-config
     ```
-5. Modify option in `/config/jasypt.php`
+5. Modify option in `/config/multi-hashing.php`
 
 ## Better use
 ```php

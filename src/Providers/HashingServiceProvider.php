@@ -19,7 +19,7 @@ class HashingServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/jasypt.php', 'hashing'
+            __DIR__ . '/../../config/multi-hashing.php', 'hashing'
         );
     }
 
@@ -31,8 +31,8 @@ class HashingServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../../config/jasypt.php' => config_path('jasypt.php')
-        ], 'jasypt-config');
+            __DIR__ . '/../../config/multi-hashing.php' => config_path('multi-hashing.php')
+        ], 'multi-hashing-config');
 
         $this->app['hash']
             ->extend('sha256', function (Application $app) {
