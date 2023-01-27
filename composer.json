@@ -3,7 +3,7 @@
     "description": "Jasypt, sha256, sha512, md5 integration for Laravel 9.x",
     "type": "library",
     "license": "MIT",
-    "version": "0.9.2",
+    "version": "0.9.3",
     "authors": [
         {
             "name": "damha-ahn",
